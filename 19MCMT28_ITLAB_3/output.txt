@@ -1,0 +1,13 @@
+
+Output For random.txt
+time :: 0.008525
+ no of Swap:: 101172673
+ mo of Comparision 104661814:: 
+Output For Descending.txt
+time :: 0.009402
+ no of Swap:: 108467561
+ mo of Comparision 119292869:: 
+Output For Ascending.txt
+time :: 0.008851
+ no of Swap:: 102003612
+ mo of Comparision 105477680:: 
