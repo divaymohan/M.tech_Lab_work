@@ -26,8 +26,11 @@ struct minHeap
 };
 void buildHeap(struct edge *, int);
 void minHeapify(struct edge *, int, int);
+void addToHeap(struct minHeap *, int, int, int);
 struct list *createNode(int, int, int);
+struct edge *deleteMin(struct minHeap *);
 int Prims(struct Queue *, int, int);
+void printHeap(struct minHeap *);
 
 int main(int argc, char *argv[])
 {
@@ -77,14 +80,15 @@ int main(int argc, char *argv[])
 }
 int Prims(struct Queue *queue, int nodes, int edges)
 {
+	int cost = 0;
 	int visited[nodes + 1];
-	int tempCount = 1;
-	for (int i = 1; i <= nodes; i++)
+	//int tempCount = 1;
+	for (int i = 0; i <= nodes; i++)
 	{
 		visited[i] = 0;
 	}
 	int source = 1;
-	visited[1] = 1;
+	//visited[1] = 0;
 	//building the heap
 	struct minHeap *mheap;
 	mheap = (struct minHeap *)malloc(sizeof(struct minHeap));
@@ -97,18 +101,97 @@ int Prims(struct Queue *queue, int nodes, int edges)
 
 	while (ls != NULL)
 	{
-		eg[tempCount].u = ls->u;
-		eg[tempCount].v = ls->v;
-		eg[tempCount].w = ls->w;
-		mheap->size++;
-		tempCount++;
+		addToHeap(mheap, ls->u, ls->v, ls->w);
 		ls = ls->next;
-		minHeapify(eg, 1, mheap->size);
 	}
+
 	while (mheap->size != 0)
 	{
+		struct edge *tempEdge = deleteMin(mheap);
+		if (visited[tempEdge->v] != 1)
+		{
+
+			//printf("\n\n%d %d %d\n\n", tempEdge->u, tempEdge->v, tempEdge->w);
+
+			int neigNode = tempEdge->v;
+
+			struct list *travEdge = queue[neigNode].head;
+			visited[tempEdge->u] = 1;
+
+			while (travEdge != NULL)
+			{
+
+				if (visited[travEdge->v] != 1)
+				{
+
+					addToHeap(mheap, travEdge->u, travEdge->v, travEdge->w);
+				}
+
+				travEdge = travEdge->next;
+			}
+			for (int i = 0; i <= nodes; i++)
+			{
+				printf("%d  ", visited[i]);
+			}
+			printf("\nTotal cost:: %d\n", cost);
+			printHeap(mheap);
+
+			cost = cost + tempEdge->w;
+		}
 	}
-	return 0;
+	printf("Total cost:: %d", cost);
+	return cost;
+}
+void addToHeap(struct minHeap *mheap, int u, int v, int w)
+{
+	struct edge *travHeap = mheap->arr;
+	mheap->size++;
+	travHeap[mheap->size].u = u;
+	travHeap[mheap->size].v = v;
+	travHeap[mheap->size].w = w;
+	int heapSize = mheap->size;
+	while (heapSize > 1 && travHeap[heapSize / 2].w > travHeap[heapSize].w)
+	{
+		int temp;
+		temp = travHeap[heapSize].u;
+		travHeap[heapSize].u = travHeap[heapSize / 2].u;
+		travHeap[heapSize / 2].u = temp;
+		temp = travHeap[heapSize].v;
+		travHeap[heapSize].v = travHeap[heapSize / 2].v;
+		travHeap[heapSize / 2].v = temp;
+		temp = travHeap[heapSize].w;
+		travHeap[heapSize].w = travHeap[heapSize / 2].w;
+		travHeap[heapSize / 2].w = temp;
+		heapSize = heapSize / 2;
+	}
+}
+struct edge *deleteMin(struct minHeap *heap)
+{
+	struct edge *tempEdge;
+	struct edge *swapEdge;
+	struct edge *heapEdge = heap->arr;
+	tempEdge = (struct edge *)malloc(sizeof(struct edge));
+	swapEdge = (struct edge *)malloc(sizeof(struct edge));
+	tempEdge->u = heapEdge[1].u;
+	tempEdge->v = heapEdge[1].v;
+	tempEdge->w = heapEdge[1].w;
+
+	swapEdge->u = heapEdge[1].u;
+	swapEdge->v = heapEdge[1].v;
+	swapEdge->w = heapEdge[1].w;
+
+	heapEdge[1].u = heapEdge[heap->size].u;
+	heapEdge[1].v = heapEdge[heap->size].v;
+	heapEdge[1].w = heapEdge[heap->size].w;
+
+	heapEdge[heap->size].u = swapEdge->u;
+	heapEdge[heap->size].v = swapEdge->v;
+	heapEdge[heap->size].w = swapEdge->w;
+
+	heap->size = heap->size - 1;
+	minHeapify(heapEdge, 1, heap->size);
+
+	return tempEdge;
 }
 struct list *createNode(int u, int v, int w)
 {
@@ -134,7 +217,7 @@ void minHeapify(struct edge *p, int i, int size)
 	{
 		smallest = i;
 	}
-	if (r < size && p[r].w > p[smallest].w)
+	if (r < size && p[r].w < p[smallest].w)
 	{
 		smallest = r;
 	}
@@ -151,4 +234,13 @@ void minHeapify(struct edge *p, int i, int size)
 		p[smallest].u = temp;
 		minHeapify(p, smallest, size);
 	}
+}
+void printHeap(struct minHeap *mheap)
+{
+	//printf("Size %d\n", mheap->size);
+	for (int i = 1; i <= mheap->size; i++)
+	{
+		printf("\n%d(%d,%d): %d", i, mheap->arr[i].u, mheap->arr[i].v, mheap->arr[i].w);
+	}
+	printf("\n\n");
 }
