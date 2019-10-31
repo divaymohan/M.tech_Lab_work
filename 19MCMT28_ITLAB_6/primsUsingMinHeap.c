@@ -77,9 +77,11 @@ int main(int argc, char *argv[])
 		printf("NULL\n");
 	}
 	int sdist = Prims(q, nodes, edges);
+	printf("Total cost:: %d\n", sdist);
 }
 int Prims(struct Queue *queue, int nodes, int edges)
 {
+
 	int cost = 0;
 	int visited[nodes + 1];
 	//int tempCount = 1;
@@ -88,7 +90,7 @@ int Prims(struct Queue *queue, int nodes, int edges)
 		visited[i] = 0;
 	}
 	int source = 1;
-	//visited[1] = 0;
+	visited[1] = 1;
 	//building the heap
 	struct minHeap *mheap;
 	mheap = (struct minHeap *)malloc(sizeof(struct minHeap));
@@ -104,42 +106,44 @@ int Prims(struct Queue *queue, int nodes, int edges)
 		addToHeap(mheap, ls->u, ls->v, ls->w);
 		ls = ls->next;
 	}
+	printHeap(mheap);
 
 	while (mheap->size != 0)
 	{
+
 		struct edge *tempEdge = deleteMin(mheap);
-		if (visited[tempEdge->v] != 1)
+		if (visited[tempEdge->u] == 1 && visited[tempEdge->v] == 1)
 		{
-
-			//printf("\n\n%d %d %d\n\n", tempEdge->u, tempEdge->v, tempEdge->w);
-
-			int neigNode = tempEdge->v;
-
-			struct list *travEdge = queue[neigNode].head;
-			visited[tempEdge->u] = 1;
-
-			while (travEdge != NULL)
-			{
-
-				if (visited[travEdge->v] != 1)
-				{
-
-					addToHeap(mheap, travEdge->u, travEdge->v, travEdge->w);
-				}
-
-				travEdge = travEdge->next;
-			}
-			for (int i = 0; i <= nodes; i++)
-			{
-				printf("%d  ", visited[i]);
-			}
-			printf("\nTotal cost:: %d\n", cost);
-			printHeap(mheap);
-
-			cost = cost + tempEdge->w;
+			continue;
 		}
+
+		//printf("\n\n%d %d %d\n\n", tempEdge->u, tempEdge->v, tempEdge->w);
+
+		int neigNode = tempEdge->v;
+
+		struct list *travEdge = queue[neigNode].head;
+
+		visited[neigNode] = 1;
+
+		while (travEdge != NULL)
+		{
+			if (visited[travEdge->v] != 1)
+			{
+				addToHeap(mheap, travEdge->u, travEdge->v, travEdge->w);
+			}
+			travEdge = travEdge->next;
+		}
+		printf("\nVISITED STATUS :: \n");
+		for (int i = 1; i <= nodes; i++)
+		{
+			printf("%d  ", visited[i]);
+		}
+		cost = cost + tempEdge->w;
+		printf("\nTotal cost till now:: %d\n", cost);
+		printf("\nHEAP STATUS :: \n");
+		printHeap(mheap);
 	}
-	printf("Total cost:: %d", cost);
+	//printf("Total cost:: %d", cost);
 	return cost;
 }
 void addToHeap(struct minHeap *mheap, int u, int v, int w)
