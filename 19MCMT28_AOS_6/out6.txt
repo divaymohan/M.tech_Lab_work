@@ -1,0 +1,9 @@
+Write Data:: 
+Data Written By Parent..!!
+Avg Calculated By child and sent to parent..!!
+Write Data:: 
+Data Written By Parent..!!
+Value Come From Parent..!!
+
+Avg of 19mcmt28 :: 80.855713 Granteed
+Avg of 19mcmt02 :: 53.852863 Not Granteed

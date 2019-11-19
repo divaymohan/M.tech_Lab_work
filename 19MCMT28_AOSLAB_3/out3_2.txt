@@ -1,0 +1,20 @@
+********Available**********
+3	3	2	
+******Calculated need********
+7	4	3	
+1	2	2	
+6	0	0	
+0	1	1	
+4	3	1	
+
+
+*******After Allocating 1 Available is:
+5 3 2 
+*******After Allocating 3 Available is:
+7 4 3 
+*******After Allocating 0 Available is:
+7 5 3 
+*******After Allocating 2 Available is:
+10 5 5 
+*******After Allocating 4 Available is:
+10 5 7 

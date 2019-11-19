@@ -6,13 +6,13 @@ struct list
 	int u;
 	int v;
 	struct list *next;
-	int w;
+	float w;
 };
 struct edge
 {
 	int u;
 	int v;
-	int w;
+	float w;
 };
 struct Queue
 {
@@ -26,8 +26,8 @@ struct minHeap
 };
 void buildHeap(struct edge *, int);
 void minHeapify(struct edge *, int, int);
-void addToHeap(struct minHeap *, int, int, int);
-struct list *createNode(int, int, int);
+void addToHeap(struct minHeap *, int, int, float);
+struct list *createNode(int, int, float);
 struct edge *deleteMin(struct minHeap *);
 int Prims(struct Queue *, int, int);
 void printHeap(struct minHeap *);
@@ -51,10 +51,10 @@ int main(int argc, char *argv[])
 	{
 		int u;
 		int v;
-		int w;
+		float w;
 		fscanf(fp, "%d", &u);
 		fscanf(fp, "%d", &v);
-		fscanf(fp, "%d", &w);
+		fscanf(fp, "%f", &w);
 		struct list *addNode;
 		addNode = createNode(u, v, w);
 		addNode->next = q[u].head;
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		printf("\nNode[%d] ", i);
 		while (temp != NULL)
 		{
-			printf("[(%d,%d),%d]->", temp->u, temp->v, temp->w);
+			printf("[(%d,%d),%f]->", temp->u, temp->v, temp->w);
 			temp = temp->next;
 		}
 		printf("NULL\n");
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 int Prims(struct Queue *queue, int nodes, int edges)
 {
 
-	int cost = 0;
+	float cost = 0;
 	int visited[nodes + 1];
 	//int tempCount = 1;
 	for (int i = 0; i <= nodes; i++)
@@ -139,14 +139,14 @@ int Prims(struct Queue *queue, int nodes, int edges)
 			printf("%d  ", visited[i]);
 		}
 		cost = cost + tempEdge->w;
-		printf("\nTotal cost till now:: %d\n", cost);
-		printf("\nHEAP STATUS :: \n");
-		printHeap(mheap);
+		printf("\nTotal cost till now:: %f\n", cost);
+		//printf("\nHEAP STATUS :: \n");
+		//printHeap(mheap);
 	}
 	//printf("Total cost:: %d", cost);
 	return cost;
 }
-void addToHeap(struct minHeap *mheap, int u, int v, int w)
+void addToHeap(struct minHeap *mheap, int u, int v, float w)
 {
 	struct edge *travHeap = mheap->arr;
 	mheap->size++;
@@ -197,7 +197,7 @@ struct edge *deleteMin(struct minHeap *heap)
 
 	return tempEdge;
 }
-struct list *createNode(int u, int v, int w)
+struct list *createNode(int u, int v, float w)
 {
 	struct list *temp;
 	temp = (struct list *)malloc(sizeof(struct list));
@@ -244,7 +244,7 @@ void printHeap(struct minHeap *mheap)
 	//printf("Size %d\n", mheap->size);
 	for (int i = 1; i <= mheap->size; i++)
 	{
-		printf("\n%d(%d,%d): %d", i, mheap->arr[i].u, mheap->arr[i].v, mheap->arr[i].w);
+		printf("\n%d(%d,%d): %f", i, mheap->arr[i].u, mheap->arr[i].v, mheap->arr[i].w);
 	}
 	printf("\n\n");
 }

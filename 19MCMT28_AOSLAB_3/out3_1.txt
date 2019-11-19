@@ -1,0 +1,9 @@
+********Available**********
+0	1	2	
+******Calculated need********
+0	0	3	
+0	1	2	
+1	2	0	
+
+
+ deadLock may occur..!

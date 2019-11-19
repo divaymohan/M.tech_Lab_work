@@ -1,0 +1,177 @@
+
+Your heap :: 
+1 0 5
+5 0 5
+6 2 4
+4 1 1
+2 4 6
+3 5 3
+
+
+ID	Execution start time
+1	0
+
+Your heap :: 
+5 0 5
+4 1 1
+6 2 4
+3 5 3
+2 4 6
+
+
+
+Your Queue status:: 
+1->5->NULL
+
+Your heap :: 
+4 1 1
+2 4 6
+6 2 4
+3 5 3
+
+
+
+Your Queue status:: 
+1->5->4->NULL
+
+Your heap :: 
+2 4 6
+3 5 3
+6 2 4
+
+
+
+Your Queue status:: 
+1->5->4->2->NULL
+
+Your heap :: 
+6 2 4
+3 5 3
+
+
+
+Your Queue status:: 
+1->5->4->2->6->NULL
+
+Your heap :: 
+3 5 3
+
+
+
+Your Queue status:: 
+1->5->4->2->6->3->NULL
+
+Your Queue status:: 
+5->4->2->6->3->1->NULL
+ID	Execution start time
+5	4
+
+Your Queue status:: 
+4->2->6->3->1->5->NULL
+ID	Execution start time
+4	8
+
+
+Meta data of process 4::
+processId : 4 
+ArivalTime: 1 	
+BurstTime: 1 	
+WaitingTime: 7 	
+TurnArroundTime: 8 	
+completionTime: 9 
+
+Your Queue status:: 
+2->6->3->1->5->NULL
+
+Your Queue status:: 
+2->6->3->1->5->NULL
+ID	Execution start time
+2	9
+
+Your Queue status:: 
+6->3->1->5->2->NULL
+ID	Execution start time
+6	13
+
+
+Meta data of process 6::
+processId : 6 
+ArivalTime: 2 	
+BurstTime: 4 	
+WaitingTime: 11 	
+TurnArroundTime: 15 	
+completionTime: 17 
+
+Your Queue status:: 
+3->1->5->2->NULL
+
+Your Queue status:: 
+3->1->5->2->NULL
+ID	Execution start time
+3	17
+
+
+Meta data of process 3::
+processId : 3 
+ArivalTime: 5 	
+BurstTime: 3 	
+WaitingTime: 12 	
+TurnArroundTime: 15 	
+completionTime: 20 
+
+Your Queue status:: 
+1->5->2->NULL
+
+Your Queue status:: 
+1->5->2->NULL
+ID	Execution start time
+1	20
+
+
+Meta data of process 1::
+processId : 1 
+ArivalTime: 0 	
+BurstTime: 5 	
+WaitingTime: 16 	
+TurnArroundTime: 21 	
+completionTime: 21 
+
+Your Queue status:: 
+5->2->NULL
+
+Your Queue status:: 
+5->2->NULL
+ID	Execution start time
+5	21
+
+
+Meta data of process 5::
+processId : 5 
+ArivalTime: 0 	
+BurstTime: 5 	
+WaitingTime: 17 	
+TurnArroundTime: 22 	
+completionTime: 22 
+
+Your Queue status:: 
+2->NULL
+
+Your Queue status:: 
+2->NULL
+ID	Execution start time
+2	22
+
+
+Meta data of process 2::
+processId : 2 
+ArivalTime: 4 	
+BurstTime: 6 	
+WaitingTime: 14 	
+TurnArroundTime: 20 	
+completionTime: 24 
+
+Your Queue status:: 
+NULL
+
+Your Queue status:: 
+NULL

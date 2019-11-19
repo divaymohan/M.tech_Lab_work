@@ -33,13 +33,14 @@ int main(int argc, char *argv[])
     int shmid = shmget(k, sizeof(struct MarksData) * 2, 0666 | IPC_CREAT);
     struct MarksData *md = (struct MarksData *)shmat(shmid, (void *)0, 0);
     printf("Write Data:: ");
-        fscanf(fp,"%s %s %f %f %f %f %f %f %f",&(md[0].name),&(md[0].RegNo),&(md[0].sub1),&(md[0].sub2),&(md[0].sub3),&(md[0].sub4),&(md[0].sub5),&(m$
-         fscanf(fp,"%s %s %f %f %f %f %f %f %f",&(md[1].name),&(md[1].RegNo),&(md[1].sub1),&(md[1].sub2),&(md[1].sub3),&(md[1].sub4),&(md[1].sub5),&($
-        printf("\nData Written By Parent..!!");
-//scanf("%s",str);
-        //printf("Data written in memory :: %s\n",str);
-        shmdt(md);
-        if(fork()==0){
+    fscanf(fp, "%s %s %f %f %f %f %f %f %f", &(md[0].name), &(md[0].RegNo), &(md[0].sub1), &(md[0].sub2), &(md[0].sub3), &(md[0].sub4), &(md[0].sub5), &(md[0].sub6), &(md[0].sub7));
+    fscanf(fp, "%s %s %f %f %f %f %f %f %f", &(md[1].name), &(md[1].RegNo), &(md[1].sub1), &(md[1].sub2), &(md[1].sub3), &(md[1].sub4), &(md[1].sub5), &(md[0].sub6), &(md[0].sub7));
+    printf("\nData Written By Parent..!!");
+    //scanf("%s",str);
+    //printf("Data written in memory :: %s\n",str);
+    shmdt(md);
+    if (fork() == 0)
+    {
         //code for child process
         key_t key = ftok("sharedFile", 65);
         int shm_id = shmget(key, sizeof(struct MarksData) * 2, 0666 | IPC_CREAT);
@@ -51,9 +52,9 @@ int main(int argc, char *argv[])
         //printf("\nChange the Data to :: ");
         //strcpy(strc,"divay");
         //printf("\nData Change by child to:: %s",strc);
-
-        }
-        else{
+    }
+    else
+    {
         sleep(3);
         //code for child process
         //key_t key = ftok("sharedFile",65);
@@ -85,6 +86,6 @@ int main(int argc, char *argv[])
         shmctl(shmid, IPC_RMID, NULL);
 
         //code for parent process
-        }
-        return 0;
+    }
+    return 0;
 }

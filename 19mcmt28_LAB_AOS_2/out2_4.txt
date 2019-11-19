@@ -1,0 +1,234 @@
+  PID  PPID CMD                         %MEM %CPU
+14449 14406 /usr/share/code/code --type  3.1  2.6
+ 6577  1907 gthumb /run/user/1000/gvfs/  3.0  0.1
+ 2540  1907 /usr/lib/x86_64-linux-gnu/z  1.9  0.0
+ 2334  1907 compiz                       1.9  1.6
+ 1056     1 /usr/sbin/mysqld             1.6  0.0
+14346  1907 /usr/share/code/code GraphA  1.4  0.9
+ 1069  1031 /usr/lib/xorg/Xorg -core :0  1.3  4.0
+14509 14449 /usr/share/code/code /usr/s  1.3  0.3
+14477 14406 /usr/share/code/code --type  1.3  0.0
+14440 14346 /usr/share/code/code --type  1.0  0.7
+ 2305  2128 nautilus -n                  1.0  0.0
+ 2107  1907 /usr/lib/x86_64-linux-gnu/h  0.7  0.0
+ 2343  1907 /usr/lib/evolution/evolutio  0.7  0.0
+ 3334  1907 /usr/lib/x86_64-linux-gnu/n  0.7  0.0
+ 2081  1907 /usr/lib/x86_64-linux-gnu/b  0.7  0.0
+ 2143  1907 /usr/lib/x86_64-linux-gnu/u  0.6  0.1
+ 2431  2343 /usr/lib/evolution/evolutio  0.6  0.0
+ 2446  2343 /usr/lib/evolution/evolutio  0.6  0.0
+ 2328  1907 /usr/lib/gnome-online-accou  0.5  0.0
+14011  1907 /usr/lib/gnome-terminal/gno  0.5  0.0
+ 2293  2128 /usr/bin/gnome-software --g  0.5  0.0
+ 2300  2128 nm-applet                    0.5  0.0
+ 2296  2128 /usr/lib/unity-settings-dae  0.4  0.0
+ 2109  1907 /usr/lib/unity-settings-dae  0.4  0.0
+ 2062  2030 /usr/lib/ibus/ibus-ui-gtk3   0.4  0.0
+14555 14509 /home/divay/.vscode/extensi  0.3  0.0
+14406 14346 /usr/share/code/code --type  0.3  0.0
+ 2178  1907 /usr/lib/x86_64-linux-gnu/i  0.3  0.0
+26399 26398 git-remote-https origin htt  0.3  0.0
+ 2824  2128 update-notifier              0.3  0.0
+ 2187  1907 /usr/lib/x86_64-linux-gnu/i  0.2  0.0
+ 2230  1907 /usr/lib/evolution/evolutio  0.2  0.0
+26853  1907 /usr/bin/unity-scope-loader  0.2  0.0
+ 2066  1907 /usr/lib/ibus/ibus-x11 --ki  0.2  0.0
+ 2294  2128 /usr/lib/policykit-1-gnome/  0.2  0.0
+ 1036     1 /usr/bin/python3 /usr/share  0.2  0.0
+ 2473  2444 /usr/lib/evolution/evolutio  0.2  0.0
+  907     1 /usr/sbin/NetworkManager --  0.2  0.0
+ 2444  1907 /usr/lib/evolution/evolutio  0.2  0.0
+ 2237  1907 /usr/bin/pulseaudio --start  0.2  1.3
+ 2522  2128 zeitgeist-datahub            0.2  0.0
+26843  1907 /usr/lib/x86_64-linux-gnu/u  0.2  0.0
+ 2173  1907 /usr/lib/x86_64-linux-gnu/i  0.2  0.0
+25265 14555 /home/divay/.vscode/extensi  0.1  0.0
+ 2128  1907 /usr/lib/gnome-session/gnom  0.1  0.0
+26885  1907 /usr/lib/x86_64-linux-gnu/u  0.1  0.0
+ 2030  1907 /usr/bin/ibus-daemon --daem  0.1  0.0
+26883  1907 /usr/lib/x86_64-linux-gnu/u  0.1  0.0
+ 2207  1907 /usr/lib/x86_64-linux-gnu/i  0.1  0.0
+ 1650     1 /usr/bin/whoopsie -f         0.1  0.0
+ 1729     1 /usr/lib/colord/colord       0.1  0.0
+ 2179  1907 /usr/lib/x86_64-linux-gnu/i  0.1  0.0
+ 1999  1907 /usr/lib/x86_64-linux-gnu/h  0.1  0.0
+ 1679     1 /usr/lib/upower/upowerd      0.1  0.0
+ 2415  1907 /usr/lib/telepathy/mission-  0.1  0.0
+ 2170  1907 /usr/lib/x86_64-linux-gnu/i  0.1  0.0
+ 1805     1 /opt/teamviewer/tv_bin/team  0.1  0.0
+12462     1 /usr/sbin/cups-browsed       0.1  0.0
+ 2351  1907 /usr/lib/gvfs/gvfs-afc-volu  0.1  0.0
+  870     1 /usr/sbin/ModemManager       0.1  0.0
+  965     1 /usr/lib/policykit-1/polkit  0.1  0.0
+  936     1 /usr/sbin/thermald --no-dae  0.1  0.0
+ 4084  1907 /usr/lib/speech-dispatcher-  0.1  0.0
+ 2335     1 /usr/lib/udisks2/udisksd --  0.1  0.0
+ 2515  1907 /usr/lib/gvfs/gvfsd-metadat  0.0  0.0
+ 2533  2529 /usr/bin/zeitgeist-daemon    0.0  0.0
+14018 14011 zsh                          0.0  0.0
+12460     1 /usr/sbin/cupsd -l           0.0  0.0
+ 2322  1907 /usr/lib/gvfs/gvfs-udisks2-  0.0  0.0
+  229     1 /lib/systemd/systemd-journa  0.0  0.0
+ 3044  2128 /usr/lib/x86_64-linux-gnu/d  0.0  0.0
+ 2165  1907 /usr/lib/x86_64-linux-gnu/i  0.0  0.0
+ 4463  1907 /usr/lib/gvfs/gvfsd-network  0.0  0.0
+ 2408  1907 /usr/lib/gnome-online-accou  0.0  0.0
+ 4520  1907 /usr/lib/gvfs/gvfsd-dnssd -  0.0  0.0
+  934     1 /usr/lib/accountsservice/ac  0.0  0.0
+ 2189  1907 /usr/lib/x86_64-linux-gnu/i  0.0  0.0
+ 1156     1 /sbin/wpa_supplicant -u -s   0.0  0.3
+ 2035  1907 /usr/lib/gvfs/gvfsd          0.0  0.0
+ 2449  1907 /usr/lib/gvfs/gvfsd-trash -  0.0  0.0
+ 1905     1 /usr/bin/gnome-keyring-daem  0.0  0.0
+ 1889  1031 lightdm --session-child 12   0.0  0.0
+ 1031     1 /usr/sbin/lightdm            0.0  0.0
+ 2418  1907 /usr/lib/gvfs/gvfs-gphoto2-  0.0  0.0
+30743 14011 zsh                          0.0  3.3
+ 2166  1907 /usr/lib/x86_64-linux-gnu/i  0.0  0.0
+    1     0 /sbin/init splash            0.0  0.0
+ 2061  2030 /usr/lib/ibus/ibus-dconf     0.0  0.0
+ 2357  1907 /usr/lib/gvfs/gvfs-mtp-volu  0.0  0.0
+ 2126  1907 /usr/lib/at-spi2-core/at-sp  0.0  0.0
+ 2041  1907 /usr/lib/gvfs/gvfsd-fuse /r  0.0  0.0
+ 2088  2030 /usr/lib/ibus/ibus-engine-s  0.0  0.0
+12465 12460 /usr/lib/cups/notifier/dbus  0.0  0.0
+  881     1 /usr/bin/dbus-daemon --syst  0.0  0.0
+  270     1 /lib/systemd/systemd-udevd   0.0  0.0
+ 2159  1907 /usr/lib/at-spi2-core/at-sp  0.0  0.0
+ 1077     1 /usr/sbin/sshd -D            0.0  0.0
+14420  1907 /usr/lib/x86_64-linux-gnu/g  0.0  0.0
+ 4089  1907 /usr/lib/speech-dispatcher-  0.0  0.0
+ 2185  1907 /usr/lib/dconf/dconf-servic  0.0  0.0
+ 4092  1907 /usr/lib/speech-dispatcher-  0.0  0.0
+ 1744     1 /usr/sbin/apache2 -k start   0.0  0.0
+ 4080  1907 /usr/lib/speech-dispatcher-  0.0  0.0
+  915     1 /usr/lib/bluetooth/bluetoot  0.0  0.0
+ 2362  1907 /usr/lib/gvfs/gvfs-goa-volu  0.0  0.0
+ 1907  1889 /sbin/upstart --user         0.0  0.0
+ 1987  1907 dbus-daemon --fork --sessio  0.0  0.0
+ 1897     1 /lib/systemd/systemd --user  0.0  0.0
+ 1234   907 /usr/sbin/dnsmasq --no-reso  0.0  0.0
+ 1458   907 /usr/sbin/dnsmasq --conf-fi  0.0  0.0
+ 2140  2126 /usr/bin/dbus-daemon --conf  0.0  0.0
+12375  1744 /usr/sbin/apache2 -k start   0.0  0.0
+12376  1744 /usr/sbin/apache2 -k start   0.0  0.0
+27967   907 /sbin/dhclient -d -q -sf /u  0.0  0.0
+  939     1 avahi-daemon: running [diva  0.0  0.0
+26398 14018 git push origin master       0.0  0.0
+30823 30822 ps -eo pid,ppid,cmd,%mem,%c  0.0  0.0
+  869     1 /usr/sbin/rsyslogd -n        0.0  0.0
+  940     1 /lib/systemd/systemd-logind  0.0  0.0
+ 1637     1 /usr/lib/rtkit/rtkit-daemon  0.0  0.0
+  925     1 /usr/sbin/cron -f            0.0  0.0
+  332     1 /lib/systemd/systemd-timesy  0.0  0.0
+ 2212  2109 syndaemon -i 1.0 -t -K -R    0.0  0.0
+  991     1 /usr/sbin/irqbalance --pid=  0.0  0.0
+ 4095  1907 /usr/bin/speech-dispatcher   0.0  0.0
+ 1898  1897 (sd-pam)                     0.0  0.0
+ 1668     1 /sbin/agetty --noclear tty1  0.0  0.0
+ 1134     1 /usr/bin/nvidia-persistence  0.0  0.0
+ 2022  1907 upstart-dbus-bridge --daemo  0.0  0.0
+  877     1 /usr/sbin/acpid              0.0  0.0
+30738     1 /lib/systemd/systemd-hostna  0.0  0.0
+ 2529  1907 /bin/sh -c /usr/lib/x86_64-  0.0  0.0
+30822 30821 sh -c ps -eo pid,ppid,cmd,%  0.0  0.0
+ 2096  1907 gpg-agent --homedir /home/d  0.0  0.0
+30821 30743 ./a.out                      0.0  0.0
+ 2028  1907 upstart-file-bridge --daemo  0.0  0.0
+  975   939 avahi-daemon: chroot helper  0.0  0.0
+ 2024  1907 upstart-dbus-bridge --daemo  0.0  0.0
+ 1973  1907 upstart-udev-bridge --daemo  0.0  0.0
+    2     0 [kthreadd]                   0.0  0.0
+    3     2 [ksoftirqd/0]                0.0  0.0
+    5     2 [kworker/0:0H]               0.0  0.0
+    7     2 [rcu_sched]                  0.0  0.0
+    8     2 [rcu_bh]                     0.0  0.0
+    9     2 [migration/0]                0.0  0.0
+   10     2 [watchdog/0]                 0.0  0.0
+   11     2 [watchdog/1]                 0.0  0.0
+   12     2 [migration/1]                0.0  0.0
+   13     2 [ksoftirqd/1]                0.0  0.0
+   15     2 [kworker/1:0H]               0.0  0.0
+   16     2 [watchdog/2]                 0.0  0.0
+   17     2 [migration/2]                0.0  0.0
+   18     2 [ksoftirqd/2]                0.0  0.0
+   20     2 [kworker/2:0H]               0.0  0.0
+   21     2 [watchdog/3]                 0.0  0.0
+   22     2 [migration/3]                0.0  0.0
+   23     2 [ksoftirqd/3]                0.0  0.0
+   25     2 [kworker/3:0H]               0.0  0.0
+   26     2 [kdevtmpfs]                  0.0  0.0
+   27     2 [netns]                      0.0  0.0
+   28     2 [perf]                       0.0  0.0
+   29     2 [khungtaskd]                 0.0  0.0
+   30     2 [writeback]                  0.0  0.0
+   31     2 [ksmd]                       0.0  0.0
+   32     2 [khugepaged]                 0.0  0.0
+   33     2 [crypto]                     0.0  0.0
+   34     2 [kintegrityd]                0.0  0.0
+   35     2 [bioset]                     0.0  0.0
+   36     2 [kblockd]                    0.0  0.0
+   37     2 [ata_sff]                    0.0  0.0
+   38     2 [md]                         0.0  0.0
+   39     2 [devfreq_wq]                 0.0  0.0
+   44     2 [kswapd0]                    0.0  0.0
+   45     2 [vmstat]                     0.0  0.0
+   46     2 [fsnotify_mark]              0.0  0.0
+   47     2 [ecryptfs-kthrea]            0.0  0.0
+   63     2 [kthrotld]                   0.0  0.0
+   64     2 [acpi_thermal_pm]            0.0  0.0
+   66     2 [bioset]                     0.0  0.0
+   67     2 [bioset]                     0.0  0.0
+   68     2 [bioset]                     0.0  0.0
+   69     2 [bioset]                     0.0  0.0
+   70     2 [bioset]                     0.0  0.0
+   71     2 [bioset]                     0.0  0.0
+   72     2 [bioset]                     0.0  0.0
+   73     2 [bioset]                     0.0  0.0
+   77     2 [ipv6_addrconf]              0.0  0.0
+   90     2 [deferwq]                    0.0  0.0
+   91     2 [charger_manager]            0.0  0.0
+  133     2 [kpsmoused]                  0.0  0.0
+  136     2 [scsi_eh_0]                  0.0  0.0
+  137     2 [scsi_tmf_0]                 0.0  0.0
+  138     2 [scsi_eh_1]                  0.0  0.0
+  139     2 [scsi_tmf_1]                 0.0  0.0
+  142     2 [nvidia-modeset]             0.0  0.0
+  145     2 [bioset]                     0.0  0.0
+  146     2 [bioset]                     0.0  0.0
+  153     2 [kworker/0:1H]               0.0  0.0
+  155     2 [kworker/2:1H]               0.0  0.0
+  178     2 [jbd2/sda6-8]                0.0  0.0
+  179     2 [ext4-rsv-conver]            0.0  0.0
+  213     2 [kauditd]                    0.0  0.0
+  251     2 [kworker/3:1H]               0.0  0.0
+  253     2 [kworker/1:1H]               0.0  0.0
+  467     2 [irq/39-DLL0662:]            0.0  0.0
+  481     2 [irq/44-mei_me]              0.0  0.0
+  525     2 [cfg80211]                   0.0  0.0
+  657     2 [kworker/u9:0]               0.0  0.2
+  658     2 [hci0]                       0.0  0.0
+  659     2 [hci0]                       0.0  0.0
+  716     2 [kvm-irqfd-clean]            0.0  0.0
+  719     2 [kmemstick]                  0.0  0.0
+  741     2 [rtsx_usb_ms_1]              0.0  0.0
+  765     2 [UVM global queu]            0.0  0.0
+  766     2 [UVM Tools Event]            0.0  0.0
+ 1139     2 [irq/47-nvidia]              0.0  0.4
+ 1140     2 [nvidia]                     0.0  0.0
+ 1697     2 [krfcommd]                   0.0  0.0
+ 4081  4080 [sd_cicero] <defunct>        0.0  0.0
+ 7467     2 [kworker/u9:1]               0.0  0.3
+29635     2 [kworker/1:1]                0.0  0.0
+29653     2 [kworker/2:1]                0.0  0.0
+29976     2 [kworker/0:1]                0.0  0.0
+30349     2 [kworker/1:2]                0.0  0.0
+30485     2 [kworker/3:0]                0.0  0.0
+30654     2 [kworker/0:2]                0.0  0.0
+30658     2 [kworker/u8:3]               0.0  0.0
+30673     2 [kworker/3:2]                0.0  0.0
+30685     2 [kworker/2:0]                0.0  0.0
+30693     2 [kworker/u8:1]               0.0  0.0
+30705     2 [kworker/3:1]                0.0  0.0
+30720     2 [kworker/2:2]                0.0  0.0
+30733     2 [kworker/u8:0]               0.0  0.0
